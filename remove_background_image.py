@@ -18,6 +18,7 @@ class BackgroundRemover:
                 output_path = os.path.join(processed_folder, filename)
                 self._remove_background(input_path, output_path)
                 self._move_originals(input_path, processed_folder)
+                print("proceso terminado")
 
     def _remove_background(self, input_p, output_p):
         with open(input_p, 'rb') as inp, open(output_p, 'wb') as outp:
